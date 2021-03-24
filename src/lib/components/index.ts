@@ -1,1 +1,5 @@
-export { default as Hello } from './Hello/index.vue'
+export { default as ZbBase } from './Base/index.vue'
+export { default as ZbButton } from './Button/index.vue'
+export { default as ZbCheckbox } from './Checkbox/index.vue'
+export { default as ZbRadio } from './Radio/index.vue'
+export { default as ZbInput } from './Input/index.vue'

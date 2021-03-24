@@ -1,3 +1,4 @@
+@import '../../lib/themes/main/index.css';
 @import './tailwind.css';
 
 body {

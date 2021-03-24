@@ -1,7 +1,7 @@
 <template>
   <div class="home-layout">
     <Navbar />
-    <div>
+    <div class="border border-blue-600">
       <slot />
     </div>
   </div>
@@ -17,6 +17,9 @@ export default {
 
 <style lang="postcss" scoped>
 .home-layout {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
   border: 1px solid red;
 }
 </style>

@@ -1,0 +1,10 @@
+:root {
+  --main-color: theme('colors.gray.700');
+  --main-color-light: theme('colors.gray.500');
+  --primary-color: theme('colors.purple.600');
+  --primary-color-light: theme('colors.purple.500');
+  --box-shadow: theme('boxShadow.DEFAULT');
+}
+
+@import './button.css';
+@import './checkbox.css';
