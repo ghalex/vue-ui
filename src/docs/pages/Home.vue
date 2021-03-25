@@ -27,45 +27,50 @@
           </ZbCheckbox>
         </div>
       </div>
-      <!-- 
-      <z-base as="z-button">Button</z-base>
 
-      <label>
-        <z-checkbox @change="(e) => console.log(e)" />
-        Checkbox
-      </label>
-      <z-checkbox v-model="chk" as="z-button" @change="(e) => console.log(e)">
-        <template #default="{ checked }"> asdf: {{ checked }}</template>
-      </z-checkbox>
-      <div role="radiogroup">
-        <div>Radios:</div>
-        <label>
-          <z-radio
-            value="apple"
-            class="px-8 min200"
-            :class="{ 'bg-blue-300': fruite === 'apple' }"
-            v-model="fruite"
-            as="z-button"
-          >
-            <template #default="{ checked }">{{ checked }}</template>
-          </z-radio>
-        </label>
-        <label>
-          <z-radio
-            value="berry"
-            class="px-8 min200"
-            :class="{ 'bg-red-300': fruite === 'berry' }"
-            v-model="fruite"
-            as="z-button"
-          >
-            <template #default="{ checked }"> {{ checked }}</template>
-          </z-radio>
-        </label>
-      </div> -->
-
-      <!-- <div>
-        <z-input :style="{ border: '1px solid red' }" />
-      </div> -->
+      <div class="border p-3">
+        <h3 class="">Radios</h3>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="flex items-center mr-2 mb-2">
+              <ZbRadio value="r1" name="r" />
+              Radio 1
+            </label>
+            <label class="flex items-center mr-2 mb-2">
+              <ZbRadio class="primary" value="r2" name="r" />
+              Radio 2
+            </label>
+            <label class="flex items-center mr-2">
+              <ZbRadio class="danger" value="r2" name="r" />
+              Radio 2
+            </label>
+          </div>
+          <div class="">
+            <label>
+              <ZbRadio
+                value="apple"
+                class="px-8 min200 rounded-r-none"
+                :class="{ 'bg-blue-300': fruite === 'apple' }"
+                v-model="fruite"
+                as="ZbButton"
+              >
+                A
+              </ZbRadio>
+            </label>
+            <label>
+              <ZbRadio
+                value="berry"
+                class="px-8 min200 rounded-l-none"
+                :class="{ 'bg-red-300': fruite === 'berry' }"
+                v-model="fruite"
+                as="ZbButton"
+              >
+                B
+              </ZbRadio>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   </HomeLayout>
 </template>

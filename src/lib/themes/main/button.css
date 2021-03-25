@@ -2,6 +2,7 @@
   --color: var(--main-color);
   --border-color: var(--main-color);
   --bg-color: white;
+  --focus-color: color-mod(var(--main-color) alpha(0.2));
 
   display: inline-flex;
   align-items: center;
@@ -21,45 +22,71 @@
   text-decoration: none;
   padding: 0 1.5rem;
   box-shadow: var(--box-shadow);
+
+  /* Disabled State */
+  &[disabled],
+  &[aria-disabled='true'] {
+    opacity: 0.5;
+  }
+
+  /* Focus State */
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2em var(--focus-color);
+  }
+
+  /* Hover State */
+  &:hover:not([disabled]),
+  &:hover:not([aria-disabled='true']) {
+    color: var(--bg-color);
+    background-color: var(--color);
+  }
+
+  /* Press State */
+  &[aria-pressed='true'] {
+    box-shadow: 0 0 0 0.4em var(--focus-color);
+  }
 }
 
-.z-btn[disabled],
-.z-btn[aria-disabled='true'] {
-  opacity: 0.5;
-}
-
-.z-btn:hover:not([disabled]),
-.z-btn:hover:not([aria-disabled='true']) {
-  color: var(--bg-color);
-  background-color: var(--color);
-}
-
-.z-btn[aria-checked='true'] {
+/* .z-btn[aria-checked='true'] {
   background-color: var(--border-color);
   color: white;
-}
+} */
 
 .z-btn.primary {
   --color: white;
   --bg-color: var(--primary-color);
   --border-color: var(--primary-color);
+  --focus-color: color-mod(var(--primary-color) alpha(0.2));
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2em var(--focus-color);
+  }
+
+  &[aria-pressed='true'] {
+    box-shadow: 0 0 0 0.4em var(--focus-color);
+  }
+}
+
+.z-btn.success {
+  --color: white;
+  --bg-color: var(--success-color);
+  --border-color: var(--success-color);
 }
 
 .z-btn.danger {
-  --color: red;
-  --bg-color: white;
-  --border-color: red;
-}
+  --color: white;
+  --bg-color: var(--danger-color);
+  --border-color: var(--danger-color);
+  --focus-color: color-mod(var(--danger-color) alpha(0.2));
 
-.z-btn:focus,
-.z-btn.primary:focus,
-.z-btn.danger:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.1);
-}
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2em var(--focus-color);
+  }
 
-.z-btn[aria-pressed='true'],
-.z-btn.primary[aria-pressed='true'],
-.z-btn.danger[aria-pressed='true'] {
-  box-shadow: 0 0 0 0.4em rgba(0, 0, 0, 0.15);
+  &[aria-pressed='true'] {
+    box-shadow: 0 0 0 0.4em var(--focus-color);
+  }
 }
