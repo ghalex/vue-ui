@@ -1,4 +1,4 @@
-![Logo](https://github.com/ghalex/vue-ui/blob/main/public/logo.png)
+![Logo](https://github.com/ghalex/vue-ui/blob/main/public/zebra.png)
 
 # ZebbraUI
 
