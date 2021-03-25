@@ -4,7 +4,7 @@
       <div class="border p-3 mb-2">
         <h3>Buttons</h3>
         <div class="grid grid-cols-5 gap-2">
-          <ZbButton @click="() => console.log('clicked')">Default Buton</ZbButton>
+          <ZbButton @click="testClick">Default Buton</ZbButton>
           <ZbButton disabled>Disabled Button</ZbButton>
           <ZbButton class="primary">Primary Button</ZbButton>
           <ZbButton class="danger">danager Button</ZbButton>
@@ -19,7 +19,7 @@
             Checkobx Small
           </label>
           <label class="flex items-center mr-2">
-            <ZbCheckbox :modelValue="chk" @change="() => console.log('change')" />
+            <ZbCheckbox v-model="chk" />
             Checkobx 1
           </label>
           <label class="flex items-center mr-2">
@@ -90,11 +90,15 @@ export default defineComponent({
     const chk = ref(true)
     const fruite = ref('apple')
 
-    watch(fruite, () => {
-      console.log('fruite:', fruite.value)
+    function testClick() {
+      chk.value = false
+    }
+
+    watch(chk, () => {
+      console.log('chk changed:', chk.value)
     })
 
-    return { margin, chk, fruite, console }
+    return { margin, chk, fruite, console, testClick }
   }
 })
 </script>

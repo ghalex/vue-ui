@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import classnames from 'classnames'
-import { computed, ref, defineComponent, onMounted } from 'vue'
+import { computed, ref, defineComponent, onMounted, watch } from 'vue'
 import Base from '../Base/index.vue'
 
 export default defineComponent({
@@ -60,9 +60,12 @@ export default defineComponent({
       // emit('change', isChecked.value)
     }
 
-    // onMounted(() => {
-    //   console.log(props.modelValue)
-    // })
+    watch(
+      () => props.modelValue,
+      () => {
+        isChecked.value = props.modelValue
+      }
+    )
 
     return { isChecked, allProps, handleClick, handleChange }
   }
