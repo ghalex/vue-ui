@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import classnames from 'classnames'
-import { computed, ref, defineComponent } from 'vue'
+import { computed, ref, defineComponent, onMounted } from 'vue'
 import Base from '../Base/index.vue'
 
 export default defineComponent({
@@ -17,7 +17,7 @@ export default defineComponent({
       default: 'input'
     },
     modelValue: {
-      type: String,
+      type: Boolean,
       required: false
     },
     class: {
@@ -27,7 +27,7 @@ export default defineComponent({
   },
   components: { Base },
   setup(props, { emit, attrs }) {
-    const isChecked = ref(false)
+    const isChecked = ref(props.modelValue)
     const allProps = computed(() => {
       const p: any = {
         ...attrs,
@@ -35,6 +35,7 @@ export default defineComponent({
         type: props.as === 'input' ? 'checkbox' : undefined,
         role: 'checkbox',
         ariaChecked: isChecked.value,
+        checked: isChecked.value,
         class: props.as === 'input' ? classnames('z-checkbox', props.class) : props.class
       }
 
@@ -45,7 +46,6 @@ export default defineComponent({
       if (props.as !== 'input') {
         isChecked.value = !isChecked.value
         emit('update:modelValue', isChecked.value)
-
         emit('change', isChecked.value)
       }
     }
@@ -57,11 +57,11 @@ export default defineComponent({
       isChecked.value = !isChecked.value
 
       emit('update:modelValue', isChecked.value)
-      emit('change', isChecked.value)
+      // emit('change', isChecked.value)
     }
 
     // onMounted(() => {
-    //   console.log(props)
+    //   console.log(props.modelValue)
     // })
 
     return { isChecked, allProps, handleClick, handleChange }

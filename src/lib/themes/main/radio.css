@@ -34,3 +34,14 @@
   --border-color: var(--danger-color);
   --icon: url('data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJjaXJjbGUiIHJvbGU9ImltZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iI2M1MzAzMCIgZD0iTTI1NiA4QzExOSA4IDggMTE5IDggMjU2czExMSAyNDggMjQ4IDI0OCAyNDgtMTExIDI0OC0yNDhTMzkzIDggMjU2IDh6IiBjbGFzcz0iIj48L3BhdGg+PC9zdmc+');
 }
+
+.z-radio.small {
+  width: 18px;
+  height: 18px;
+
+  &:checked,
+  &[aria-checked='true'] {
+    background-position: 2px 2px;
+    background-size: 10px 10px;
+  }
+}

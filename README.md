@@ -1,29 +1,42 @@
-# vue3-ui
+![Logo](https://github.com/ghalex/vue-ui/blob/main/public/logo.png)
 
-## Project setup
-```
-npm install
-```
+# Zebbra: Vue-UI
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+[![npm](https://img.shields.io/npm/dm/zebbra.svg)](https://www.npmjs.com/package/@zebbra/vue-ui)
+[![npm](https://img.shields.io/npm/v/zebbra.svg)](https://www.npmjs.com/package/@zebbra/vue-ui)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+**Zebbra- Vue-UI** is a collection of Vue components for building accessible high level UI libraries. Zebbra Vue-UI doesn't depend on any CSS library. Components are unstyled by default.
 
-### Run your unit tests
-```
-npm run test:unit
+**Zebbra- Vue-UI** contains 3 packages:
+
+```js static
+@zebbra/components
+@zebbra/themes
+@zebbra/hooks
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+[View on Github](https://github.com/ghalex/vue-ui)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Components List
+
+- [ ] Box
+- [x] Button
+- [x] Checkbox
+- [x] Radio
+- [ ] DatePicker
+- [ ] Dropdown
+- [ ] Field
+- [ ] Group
+- [x] Input
+- [ ] Menu
+- [ ] Switch
+- [ ] Text
+- [ ] Textarea
+
+## License
+
+Copyright (c) 2018 [Zebbra contributors](https://github.com/ghalex/vue-ui/graphs/contributors)
+
+Licensed under the [MIT license](https://github.com/ghalex/vue-ui/blob/HEAD/LICENSE).

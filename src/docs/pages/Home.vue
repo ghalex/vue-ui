@@ -15,7 +15,11 @@
         <h3 class="">Checkbox</h3>
         <div class="grid grid-cols-5 gap-2">
           <label class="flex items-center mr-2">
-            <ZbCheckbox />
+            <ZbCheckbox class="small" />
+            Checkobx Small
+          </label>
+          <label class="flex items-center mr-2">
+            <ZbCheckbox :modelValue="chk" @change="() => console.log('change')" />
             Checkobx 1
           </label>
           <label class="flex items-center mr-2">
@@ -37,7 +41,7 @@
               Radio 1
             </label>
             <label class="flex items-center mr-2 mb-2">
-              <ZbRadio class="primary" value="r2" name="r" />
+              <ZbRadio class="primary small" value="r2" name="r" />
               Radio 2
             </label>
             <label class="flex items-center mr-2">
@@ -83,7 +87,7 @@ export default defineComponent({
   components: { HomeLayout },
   setup() {
     const margin = { top: 0, right: 0, bottom: 0, left: 0 }
-    const chk = ref(false)
+    const chk = ref(true)
     const fruite = ref('apple')
 
     watch(fruite, () => {
