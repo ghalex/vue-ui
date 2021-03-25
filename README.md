@@ -2,19 +2,19 @@
 
 # ZebbraUI
 
-[![npm](https://img.shields.io/npm/dm/zebbra.svg)](https://www.npmjs.com/package/@zebbra/vue-ui)
-[![npm](https://img.shields.io/npm/v/zebbra.svg)](https://www.npmjs.com/package/@zebbra/vue-ui)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![npm](https://img.shields.io/npm/dm/@zebbra/vue-ui?style=flat-square)](https://www.npmjs.com/package/@zebbra/vue-ui)
+[![npm](https://img.shields.io/npm/v/@zebbra/vue-ui?style=flat-square)](https://www.npmjs.com/package/@zebbra/vue-ui)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 **ZebbraUI** is a collection of Vue components for building accessible high level UI libraries. ZebbraUI doesn't depend on any CSS library. Components are unstyled by default.
 
 **ZebbraUI** contains 3 packages:
 
 ```js static
-@zebbra/components
-@zebbra/themes
-@zebbra/hooks
+@zebbra/vue-ui
+@zebbra/vue-themes
+@zebbra/vue-hooks
 ```
 
 [View on Github](https://github.com/ghalex/vue-ui)
