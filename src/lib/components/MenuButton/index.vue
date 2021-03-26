@@ -1,14 +1,14 @@
 <template>
-  <Base v-bind="allProps" @mousedown="() => (isPressed = true)" @mouseup="() => (isPressed = false)"><slot /></Base>
+  <Base v-bind="allProps" @click="handleClick"><slot /></Base>
 </template>
 
 <script lang="ts">
-import classnames from 'classnames'
-import { computed, defineComponent, ref } from 'vue'
+import cs from 'classnames'
+import { computed, defineComponent, inject } from 'vue'
 import Base from '../Base/index.vue'
 
 export default defineComponent({
-  name: 'Button',
+  name: 'MenuButton',
   props: {
     as: {
       type: String,
@@ -21,20 +21,25 @@ export default defineComponent({
   },
   components: { Base },
   setup(props, { attrs }) {
-    const isPressed = ref(false)
+    const state = inject('menu-state', { isOpen: false, toggle: () => true })
+
     const allProps = computed(() => {
       const p: any = {
         ...attrs,
         as: props.as,
-        role: 'button',
-        ariaPressed: isPressed.value,
-        class: classnames('z-btn', props.class)
+        class: cs('z-menu-button', props.class),
+        'aria-haspopup': 'menu',
+        'aria-expanded': state.isOpen
       }
 
       return p
     })
 
-    return { allProps, isPressed }
+    function handleClick() {
+      state.toggle()
+    }
+
+    return { allProps, state, handleClick }
   }
 })
 </script>

@@ -1,16 +1,18 @@
 .z-checkbox {
   --border-color: var(--main-color);
   --bg-color: var(--main-color-light);
+  --radius: calc(var(--border-radius) / 2);
 
   appearance: none;
   border: 2px var(--border-color) solid;
-  border-radius: 6px;
+  border-radius: var(--radius);
   outline: none;
   cursor: pointer;
   width: 22px;
   height: 22px;
   display: inline-flex;
   margin-right: 5px;
+  background-color: white;
 }
 
 .z-checkbox:checked,

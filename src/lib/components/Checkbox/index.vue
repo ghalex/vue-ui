@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import classnames from 'classnames'
-import { computed, ref, defineComponent, onMounted, watch } from 'vue'
+import { computed, ref, defineComponent, watch } from 'vue'
 import Base from '../Base/index.vue'
 
 export default defineComponent({
