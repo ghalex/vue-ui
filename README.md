@@ -9,17 +9,43 @@
 
 **ZebbraUI** is a collection of Vue components for building accessible high level UI libraries. ZebbraUI doesn't depend on any CSS library. Components are unstyled by default.
 
-**ZebbraUI** contains 3 packages:
+**ZebbraUI** basic example:
 
-```js static
-@zebbra/vue-ui
-@zebbra/vue-themes
-@zebbra/vue-hooks
+Here is a simple dialog:
+
+```js
+<div>
+  <ZbDialogDisclosure :state="dlg1">Open dialog</ZbDialogDisclosure>
+  <ZbDialog :state="dlg1">
+    <h2 class="border-b-2 border-gray-500 px-2 py-2">Hy! this is a dialog</h2>
+    <div class="p-8">
+      <ZbButton @click="dlg1.close">Click to close</ZbButton>
+    </div>
+  </ZbDialog>
+  <ZbDialogBackdrop class="bg-purple-200 opacity-30" :state="dlg1" />
+</div>
+```
+
+```js
+<script>
+import { defineComponent } from 'vue'
+import { useDialog, ZbDialog, ZbDialogDisclosure, ZbDialogBackdrop } from '@zebbra/vue-ui'
+
+export default defineComponent({
+  components: { ZbDialog, ZbDialogDisclosure, ZbDialogBackdrop },
+  setup() {
+    const dlg1 = useDialog()
+    return { dlg1 }
+  }
+})
+</script>
 ```
 
 [View on Github](https://github.com/ghalex/vue-ui)
 
 ## Components List
+
+This project is still in early development. New components will be added regularly.
 
 - [ ] Box
 - [x] Button
@@ -30,9 +56,8 @@
 - [ ] Field
 - [ ] Group
 - [x] Input
-- [ ] Menu
+- [x] Menu
 - [ ] Switch
-- [ ] Text
 - [ ] Textarea
 
 ## License
