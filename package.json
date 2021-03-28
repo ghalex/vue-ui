@@ -1,6 +1,6 @@
 {
-  "name": "@zebbra/vue-ui",
-  "version": "0.1.7",
+  "name": "@zebbra/ui",
+  "version": "0.1.0",
   "main": "./dist/vue-ui.umd.js",
   "scripts": {
     "start": "vue-cli-service serve",
